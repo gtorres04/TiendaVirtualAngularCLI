@@ -1,0 +1,6 @@
+.campo-formulario > *{
+    display: block;
+}
+.msn-error, .campo-formulario span{
+    color: red;
+}
