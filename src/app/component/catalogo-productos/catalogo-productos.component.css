@@ -1,0 +1,14 @@
+.panel-catalogo-productos{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.formulario-buscar *{
+    display: block;
+    margin-right: 15px;
+}
+
+.panel-catalogo-productos .panel-heading {
+    height: 78px;
+}

@@ -13,7 +13,7 @@
         <span *ngIf="!contrasena.valid && contrasena.touched">Error: campo requerido</span>
       </div>
       <span class="msn-error" *ngIf="msnUsuarioNoEncontrado!=undefined">{{msnUsuarioNoEncontrado}}</span>
-      <button (click)="login()" type="button">Ingresar</button>
+      <button (click)="login()" class="btn btn-success" type="button">Ingresar</button>
     </form>
   </div>
 </div>

@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.component';
 import { UsuariosService } from './service/usuarios.service';
 import { DatabaseService } from './db/database.service';
 import { CatalogoProductosComponent } from './component/catalogo-productos/catalogo-productos.component';
+import { ItemProductoComponent } from './component/item-producto/item-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MenuPrincipalComponent,
-    CatalogoProductosComponent
+    CatalogoProductosComponent,
+    ItemProductoComponent
   ],
   imports: [
     BrowserModule,

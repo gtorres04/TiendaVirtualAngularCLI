@@ -1,0 +1,10 @@
+.imagen-producto{
+    width: 100%;
+}
+.panel-item-producto{
+    width: 30%;
+}
+.panel-item-producto input{
+    width: 45px;
+    height: 33px;
+}
