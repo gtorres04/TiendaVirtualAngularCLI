@@ -1,12 +1,12 @@
 <div class="panel-item-producto panel panel-default">
   <div class="panel-body">
-    <img class="imagen-producto" src="./assets/img/{{imagen}}" alt="">
-    <h4>Nombre</h4>
+    <img class="imagen-producto" src="./assets/img/{{producto.imagen}}" alt="">
+    <h4>{{producto.nombre}}</h4>
     <div>
-      <label for="">Precio:</label><span>$200</span>
+      <label for="">Precio:</label><span>${{producto.precio}}</span>
     </div>
     <div>
-      <label for="">Unidades Disponibles:</label><span>46</span>
+      <label for="">Unidades Disponibles:</label><span>{{producto.unidadesDisponibles}}</span>
     </div>
     <div>
       <button type="button" class="btn btn-primary">Ver Mas</button>
