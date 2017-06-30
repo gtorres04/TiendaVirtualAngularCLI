@@ -12,3 +12,14 @@
 .panel-catalogo-productos .panel-heading {
     height: 78px;
 }
+
+.panel-body{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.item-producto{
+    width: 31%;
+    margin: 10px;
+}

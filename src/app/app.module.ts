@@ -10,6 +10,7 @@ import { UsuariosService } from './service/usuarios.service';
 import { DatabaseService } from './db/database.service';
 import { CatalogoProductosComponent } from './component/catalogo-productos/catalogo-productos.component';
 import { ItemProductoComponent } from './component/item-producto/item-producto.component';
+import { ProductosService } from './service/productos.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ItemProductoComponent } from './component/item-producto/item-producto.c
   providers: [
     UsuariosService,
     DatabaseService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

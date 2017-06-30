@@ -1,9 +1,7 @@
 .imagen-producto{
-    width: 100%;
+    height: 156px;
 }
-.panel-item-producto{
-    width: 30%;
-}
+
 .panel-item-producto input{
     width: 45px;
     height: 33px;

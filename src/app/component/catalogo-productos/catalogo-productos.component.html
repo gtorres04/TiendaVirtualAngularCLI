@@ -4,10 +4,12 @@
     <span class="panel-title">Catálogo de productos</span>
     <div class="formulario-buscar navbar-right">
       <label for="buscador">¿Que estas buscando?</label>
-      <input type="text"/>
+      <input type="text" (ngModelChange)="buscarProductos($event)" [ngModel]="mymodel"/>
     </div>
   </div>
   <div class="panel-body">
-    <app-item-producto [producto]="producto" ></app-item-producto>
+    <div class="item-producto" *ngFor="let producto of productosBuscados">
+      <app-item-producto [producto]="producto" ></app-item-producto>
+    </div>
   </div>
 </div>
