@@ -2,3 +2,8 @@
 body, h1{
     margin: 0px;
 }
+.panel-catalogo-productos, .panel-detalle-producto{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+}

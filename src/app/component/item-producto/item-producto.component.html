@@ -9,7 +9,7 @@
       <label for="">Unidades Disponibles:</label><span>{{producto.unidadesDisponibles}}</span>
     </div>
     <div>
-      <button type="button" class="btn btn-primary">Ver Mas</button>
+      <a href="javascript:;" [routerLink]="['detalle-producto',producto.id]" class="btn btn-primary">Ver Mas</a>
       <button type="button" class="btn btn-warning">Añadir</button>
       <input type="number" name="cantidadAgregar" value="">
     </div>
