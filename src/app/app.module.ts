@@ -12,6 +12,7 @@ import { CatalogoProductosComponent } from './component/catalogo-productos/catal
 import { ItemProductoComponent } from './component/item-producto/item-producto.component';
 import { ProductosService } from './service/productos.service';
 import { DetalleProductoComponent } from './component/detalle-producto/detalle-producto.component';
+import { PedidosComponent } from './component/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetalleProductoComponent } from './component/detalle-producto/detalle-p
     MenuPrincipalComponent,
     CatalogoProductosComponent,
     ItemProductoComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

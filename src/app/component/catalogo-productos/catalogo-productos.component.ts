@@ -40,6 +40,7 @@ export class CatalogoProductosComponent implements OnInit {
     this.productoAAgregar.id = productoRecibido.id;
     this.productoAAgregar.nombre = productoRecibido.nombre;
     this.productoAAgregar.precio = productoRecibido.precio;
+    this.productoAAgregar.imagen = productoRecibido.imagen;
     this.productoAAgregar.unidadesDisponibles = productoRecibido.unidadesDisponibles;
     this.productoAAgregar.cantidadAComprar = event.cantidad;
     this.productosService.agregarProductoAlCarrito(this.productoAAgregar);
