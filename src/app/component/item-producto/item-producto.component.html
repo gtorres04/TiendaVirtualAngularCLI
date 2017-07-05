@@ -3,15 +3,15 @@
     <img class="imagen-producto" src="./assets/img/{{producto.imagen}}" alt="">
     <h4>{{producto.nombre}}</h4>
     <div>
-      <label for="">Precio:</label><span>${{producto.precio}}</span>
+      <label for="">Precio:&nbsp;</label><span>${{producto.precio}}</span>
     </div>
     <div>
-      <label for="">Unidades Disponibles:</label><span>{{producto.unidadesDisponibles}}</span>
+      <label for="">Unidades Disponibles:&nbsp;</label><span>{{cantidadTotalUnidadesDisponibles}}</span>
     </div>
     <div>
       <a href="javascript:;" [routerLink]="['detalle-producto',producto.id]" class="btn btn-primary">Ver Mas</a>
-      <button type="button" class="btn btn-warning">Añadir</button>
-      <input type="number" name="cantidadAgregar" value="">
+      <a class="btn btn-warning" href="javascript:;" (click)="agregarProductoAlCarrito()">Añadir</a>
+      <input max="{{cantidadTotalUnidadesDisponibles}}" type="number" name="cantidadAgregar" [(ngModel)]="cantidadAgregar" (ngModelChange)="calcularUnidadesDisponibles($event)">
     </div>
   </div>
 </div>

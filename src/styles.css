@@ -7,3 +7,7 @@ body, h1{
     margin: 0 auto;
     margin-top: 10px;
 }
+.imagen-fondo-principal{
+    background-image: url('./assets/img/main-fondo.jpg');
+    height: 100%;
+}

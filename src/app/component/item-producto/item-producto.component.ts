@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../../domain/producto';
 
 @Component({
@@ -8,7 +8,26 @@ import { Producto } from '../../domain/producto';
 })
 export class ItemProductoComponent implements OnInit {
   @Input() producto:Producto;
-  constructor() { }
-  ngOnInit() {}
+  @Output() productoAgregar = new EventEmitter();
+  cantidadAgregar:Number;
+  cantidadTotalUnidadesDisponibles:number;
 
+  constructor() { }
+
+  ngOnInit() {
+    this.cantidadTotalUnidadesDisponibles = this.producto.unidadesDisponibles;
+  }
+  
+  agregarProductoAlCarrito(){
+    this.producto.unidadesDisponibles = this.cantidadTotalUnidadesDisponibles;
+    this.productoAgregar.emit(
+      {
+        producto:this.producto, 
+        cantidad:this.cantidadAgregar
+      }
+    );
+  }
+  calcularUnidadesDisponibles(val:number){
+    this.cantidadTotalUnidadesDisponibles = this.producto.unidadesDisponibles-val;
+  }
 }

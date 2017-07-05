@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Producto } from '../../domain/producto';
 
 @Component({
   selector: 'app-menu-principal',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-principal.component.css']
 })
 export class MenuPrincipalComponent implements OnInit {
-
+  @Input() cantidadAgregados:Number;
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,7 +1,8 @@
 export class Producto {
-    id:Number;
+    id:number;
     nombre:String;
     imagen:String;
-    precio:Number;
-    unidadesDisponibles:Number;
+    precio:number;
+    unidadesDisponibles:number;
+    cantidadAComprar:number;
 }

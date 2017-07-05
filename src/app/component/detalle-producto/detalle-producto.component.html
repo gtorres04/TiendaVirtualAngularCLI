@@ -1,10 +1,23 @@
-<app-menu-principal></app-menu-principal>
-<div class="panel-detalle-producto panel panel-default">
-  <div class="panel-heading">
-    <span class="panel-title">Catálogo de productos</span>
-  </div>
-  <div class="panel-body">
-    dets
-    <a href="javascript:;" (click)="goBack()" class="btn btn-default">Atras</a>
+<div class="imagen-fondo-principal">
+  <app-menu-principal></app-menu-principal>
+  <div class="panel-detalle-producto panel panel-default">
+    <div class="panel-heading">
+      <span class="panel-title">{{producto.nombre}}</span>
+    </div>
+    <div class="panel-body">
+      <div class="container-info">
+        <div class="imagen-producto">
+          <img src="./assets/img/{{producto.imagen}}" alt="{{producto.nombre}}">
+        </div>
+        <div class="info-producto">
+          <ul>
+            <li><label>Nombre:&nbsp;</label>{{producto.nombre}}</li>
+            <li><label>Precio:&nbsp;</label>${{producto.precio}}</li>
+            <li><label>Unidades Disponibles:&nbsp;</label>{{producto.unidadesDisponibles}}</li>
+          </ul>
+        </div>
+      </div>
+      <a href="javascript:;" (click)="goBack()" class="boton-volver btn btn-default">Atras</a>
+    </div>
   </div>
 </div>
