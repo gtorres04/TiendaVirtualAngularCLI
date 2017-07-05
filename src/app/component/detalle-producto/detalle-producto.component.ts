@@ -11,12 +11,14 @@ import { Producto } from '../../domain/producto';
 })
 export class DetalleProductoComponent implements OnInit {
   producto:Producto=new Producto();
+  cantidadAgregados:number;
   constructor(private location: Location, 
               private route: ActivatedRoute,
               private productosService: ProductosService) { }
 
   ngOnInit() {
-    let idProducto:Number=0;
+    this.cantidadAgregados = this.productosService.getProductosAgregadosAlCarrito().length;
+    let idProducto:Number = 0;
     this.route.params.subscribe(params => {
       if(params['id'] != null){
           this.consultarProductoPorId(Number.parseInt(params['id']));

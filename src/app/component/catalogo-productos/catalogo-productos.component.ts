@@ -14,10 +14,11 @@ export class CatalogoProductosComponent implements OnInit {
   productos:Producto[];
   productosBuscados:Producto[];
   productoAAgregar:Producto;
-  cantidadAgregados:Number;
+  cantidadAgregados:number;
   constructor(private productosService:ProductosService) { }
 
   ngOnInit() {
+    this.cantidadAgregados = this.productosService.getProductosAgregadosAlCarrito().length;
     this.productosService.getProductos().then(productos => {
       this.productos = productos as Producto[];
       this.productosBuscados = productos as Producto[];

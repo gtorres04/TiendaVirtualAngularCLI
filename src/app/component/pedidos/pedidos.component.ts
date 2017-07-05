@@ -11,11 +11,12 @@ import { Location } from '@angular/common';
 export class PedidosComponent implements OnInit {
 
   productosEnCarrito:Producto[];
-
+  cantidadAgregados:number;
   constructor(private productosService:ProductosService,private location: Location,) { }
 
   ngOnInit() {
     this.productosEnCarrito = this.productosService.getProductosAgregadosAlCarrito();
+    this.cantidadAgregados = this.productosEnCarrito.length;
   }
 
   goBack(): void {
