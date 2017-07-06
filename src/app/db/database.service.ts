@@ -24,4 +24,20 @@ export class DatabaseService{
               console.log("error");
             });
   }
+  getPedidos():Promise<Producto[]>{
+    return this.http.get('https://tienda-9303e.firebaseio.com/pedidos.json').toPromise()
+            .then(response  =>  response.json() as Producto[])
+            .catch(function(){
+              console.log("error");
+            });
+  }
+  addPedido(producto:Producto):Promise<Producto>{
+    const data = JSON.stringify(producto);
+    return this.http.post('https://tienda-9303e.firebaseio.com/pedidos.json', data)
+      .toPromise()
+      .then(response  =>  response.json() as Producto)
+      .catch(function(){
+        console.log("error");
+      });
+  }
 }

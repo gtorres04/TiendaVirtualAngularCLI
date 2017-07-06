@@ -13,7 +13,22 @@ export class ProductosService {
   }
 
   getProductos():Promise<Producto[]>{
-    return this.databaseService.getProductos().then(productos => productos as Producto[]);
+    return this.databaseService.getProductos().then(productos => {
+      var productoAll:Producto[] = productos as Producto[];
+      return this.databaseService.getPedidos().then(response => {
+        let pedidos:Producto[]=response as Producto[];
+        for (let pedido in pedidos) {
+          var elementPedido = JSON.parse(pedido) as Producto;
+          for (var index = 0; index < productoAll.length; index++) {
+            var elementProducto = productoAll[index];
+            if(elementProducto.id === elementPedido.id){
+              elementProducto.unidadesDisponibles -= elementPedido.cantidadAComprar;
+            }
+          }
+        }
+        return productoAll;
+      });
+    });
   }
   
   getProductosById(id:Number):Promise<Producto>{
@@ -40,5 +55,13 @@ export class ProductosService {
 
   getProductosAgregadosAlCarrito():Producto[]{
     return this.productosTemporalesCarrito;
+  }
+
+  cleanProductosAgregadosAlCarrito(){
+    this.productosTemporalesCarrito = [];
+  }
+  
+  addPedido(producto:Producto):Promise<Producto>{
+    return this.databaseService.addPedido(producto);
   }
 }

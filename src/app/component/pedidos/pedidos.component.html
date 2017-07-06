@@ -19,7 +19,9 @@
           </ul>
         </div>
         <div class="total-pedido">
-          
+          <h2>Total: {{totalAPagar}}</h2>
+          <a href="javascript:;" (click)="cancelarPedidos()" class="boton-volver btn btn-default">Cancelar</a>
+          <a href="javascript:;" (click)="pagarPedidos()" class="boton-volver btn btn-default">Pagar</a>
         </div>
       </div>
       <a href="javascript:;" (click)="goBack()" class="boton-volver btn btn-default">Atras</a>
