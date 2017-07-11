@@ -37,6 +37,8 @@ export class PedidosComponent implements OnInit {
       var element:Producto = this.productosEnCarrito[index];
       this.productosService.addPedido(element);
     }
+    this.productosService.cleanProductosAgregadosAlCarrito();
+    this.goBack();
   }
 
 }
