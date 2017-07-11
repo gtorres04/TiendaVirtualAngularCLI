@@ -18,7 +18,7 @@ export class ProductosService {
       return this.databaseService.getPedidos().then(response => {
         let pedidos:Producto[]=response as Producto[];
         for (let pedido in pedidos) {
-          var elementPedido = JSON.parse(pedido) as Producto;
+          var elementPedido = pedidos[pedido] as Producto;
           for (var index = 0; index < productoAll.length; index++) {
             var elementProducto = productoAll[index];
             if(elementProducto.id === elementPedido.id){
