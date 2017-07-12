@@ -30,6 +30,7 @@ export class PedidosComponent implements OnInit {
 
   cancelarPedidos():void{
     this.productosService.cleanProductosAgregadosAlCarrito();
+    this.goBack();
   }
 
   pagarPedidos(): void{
